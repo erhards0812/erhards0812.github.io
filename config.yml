@@ -17,8 +17,8 @@ minify:
 params:
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
   title: Shinyu株式会社
-  description: "ExampleSite description"
-  keywords: [Blog, Portfolio, PaperMod]
+  description: "Shinyu株式会社"
+  keywords: [会社概要, Ruby on Rails, Rust, Axum, Go, Golang]
   author: Stefan Erhard
   # author: ["Me", "You"] # multiple authors
   images: ["<link or path of image for opengraph, twitter-cards>"]
@@ -74,7 +74,7 @@ params:
   # home-info mode
   homeInfoParams:
     Title: "Hi there \U0001F44B"
-    Content: Welcome to my blog
+    Content: 私たちは常に新しいものを創り出し、エンジニアリングのスキルと情熱を活かすことに誇りを持っています。私たちのチームはゼロからイノベーションを生み出し、新たな技術とソリューションを開発し、お客様の課題を解決します。最新のテクノロジーを駆使してプロジェクトを推進し、お客様のビジョンを実現します。私たちの使命は、持続可能な未来を築くお手伝いをすることです。 
 
   socialIcons:
     - name: twitter
