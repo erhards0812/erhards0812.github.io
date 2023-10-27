@@ -1,4 +1,4 @@
-name: Deploy Hugo PaperMod Demo to Pages
+name: deploy company page 
 
 on:
   push:
@@ -8,7 +8,6 @@ on:
       - "README.md"
     branches:
       - master
-      - exampleSite
   workflow_dispatch:
     # manual run
     inputs:
