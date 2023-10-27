@@ -3,7 +3,7 @@ title: Shinyu株式会社
 paginate: 5
 theme: PaperMod
 
-# enableRobotsTXT: true
+enableRobotsTXT: true
 buildDrafts: false
 buildFuture: false
 buildExpired: false
@@ -23,7 +23,7 @@ params:
   # author: ["Me", "You"] # multiple authors
   images: ["<link or path of image for opengraph, twitter-cards>"]
   DateFormat: "January 2, 2006"
-  defaultTheme: auto # dark, light
+  defaultTheme: dark # auto # dark, light
   disableThemeToggle: false
 
   ShowReadingTime: true
@@ -76,13 +76,13 @@ params:
     Title: "Hi there \U0001F44B"
     Content: 私たちは常に新しいものを創り出し、エンジニアリングのスキルと情熱を活かすことに誇りを持っています。私たちのチームはゼロからイノベーションを生み出し、新たな技術とソリューションを開発し、お客様の課題を解決します。最新のテクノロジーを駆使してプロジェクトを推進し、お客様のビジョンを実現します。私たちの使命は、持続可能な未来を築くお手伝いをすることです。 
 
-  socialIcons:
-    - name: twitter
-      url: "https://twitter.com/"
-    - name: stackoverflow
-      url: "https://stackoverflow.com"
-    - name: github
-      url: "https://github.com/"
+  # socialIcons:
+  #   - name: twitter
+  #     url: "https://twitter.com/"
+  #   - name: stackoverflow
+  #     url: "https://stackoverflow.com"
+  #   - name: github
+  #     url: "https://github.com/"
 
   analytics:
     google:
@@ -114,10 +114,10 @@ params:
     keys: ["title", "permalink", "summary", "content"]
 menu:
   main:
-    - identifier: tags
-      name: タッグ
-      url: /tags/
-      weight: 10
+    # - identifier: tags
+    #   name: タッグ
+    #   url: /tags/
+    #   weight: 10
     - identifier: company 
       name: 会社概要
       url: /company
