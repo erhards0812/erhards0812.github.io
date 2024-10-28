@@ -1,0 +1,86 @@
+baseURL = "https://shinyu-corp.com"
+languageCode = "en-us"
+title = "Shinyu株式会社"
+theme = "hugo-digital-garden-theme"
+copyright = "Shinyu株式会社"
+
+
+[params]
+  name = "Hi There"
+  description = "Rust、Go、および Ruby の専門知識を駆使し、私たちは常に高性能かつ信頼性のあるWebアプリケーションを提供し、エンジニアリングのスキルと情熱を活かすことに誇りを持っています。私たちの使命は、持続可能な未来を築くお手伝いをすることです。"
+  initials = "Shinyu株式会社"
+  googleAnalytics = ""
+
+  # [[params.social]]
+  #   name = "Twitter"
+  #   link = "#"
+  #   icon = "fab fa-twitter"
+  #
+  # [[params.social]]
+  #   name = "Github"
+  #   link = "#"
+  #   icon = "fab fa-github"
+  #
+  # [[params.social]]
+  #   name = "Medium" 
+  #   link = "#"
+  #   icon = "fab fa-medium-m"
+  #
+  # [[params.social]]
+  #   name = "LinkedIn"
+  #   link = "#"
+  #   icon = "fab fa-linkedin-in"
+
+
+[menu]
+  [[menu.main]]
+    name = "会社概要"
+    url = "/company"
+    weight = 1
+
+  # [[menu.main]]
+  #   name = "Digital Garden"
+  #   url = "/garden/"
+  #   weight = 1
+  # [[menu.main]]
+  #   name = "Projects"
+  #   url = "/projects/"
+  #   weight = 2
+  # [[menu.main]]
+  #   name = "Library"
+  #   url = "/library/"
+  #   weight = 3
+  # [[menu.main]]
+  #   name = "About"
+  #   url = "/about/"
+  #   weight = 4
+
+
+[taxonomies]
+  garden_tags = 'garden_tags'
+  project_tags = 'project_tags'
+  library_tags = 'library_tags'
+
+
+[markup]
+  defaultMarkdownHandler = 'goldmark'
+  [markup.goldmark.renderer]
+    unsafe = true
+  [markup.goldmark.parser]
+    autoHeadingID = true
+    autoHeadingIDType = 'github'
+    wrapStandAloneImageWithinParagraph = true
+    [markup.goldmark.parser.attribute]
+      block = false
+      title = true
+  [markup.goldmark.extensions]
+    definitionList = true
+    footnote = true
+    linkify = true
+    strikethrough = true
+    table = true
+    taskList = true
+    typographer = true
+  [markup.highlight]
+    # Choose from https://xyproto.github.io/splash/docs/all.html
+    style = 'monokailight'
