@@ -24,6 +24,7 @@ socials = [
 ]
 
 menu = [
-  { name = "会社概要", url = "/company", weight = 1 },
+  { name = "ホーム", url = "/", weight = 1 },
   { name = "ブログ", url = "/posts", weight = 2 },
+  { name = "会社概要", url = "/company", weight = 3 },
 ]
