@@ -1,0 +1,66 @@
+{% import "macros/macros.html" as post_macros %}
+
+<!DOCTYPE html>
+<html lang="en" class="dark light">
+
+    {% include "partials/header.html" %}
+
+    <body>
+        {% include "apollo/body_start.html" ignore missing %}
+        <div class="left-content">
+            {% block left_content %}
+            {% endblock left_content %}
+        </div>
+
+        <div class="content">
+            {% include "partials/nav.html" %}
+
+            {# Post page is the default #}
+            {% block main_content %}
+                Nothing here?!
+            {% endblock main_content %}
+
+            {% if section.path is defined and section.path == "/" %}
+              {% set posts_section = get_section(path="posts/_index.md") %}
+    
+              <h1><a href="/posts">ブログ</a></h1>
+              <ul class="posts-list" style="margin-top: 2rem;">
+                  {% for post in posts_section.pages | slice(end=7) %}
+                      <li class="log-item" style="margin-bottom: 1.5rem; list-style: none;">
+                          <span class="log-date" style="font-family: monospace; opacity: 0.7; margin-right: 1rem;">
+                              {{ post.date | date(format="%Y-%m-%d") }}
+                          </span>
+                          <a class="log-link" href="{{ post.permalink }}" style="font-weight: bold; text-decoration: none;">
+                              {{ post.title }}
+                          </a>
+                          {% if post.description %}
+                              <p class="log-desc" style="margin: 0.25rem 0 0 0; opacity: 0.85; font-size: 0.95rem;">
+                                  {{ post.description }}
+                              </p>
+                          {% endif %}
+                      </li>
+                  {% endfor %}
+              </ul>
+            {% endif %}
+
+            {% if page.extra.comment is defined %}
+                {% set show_comment = page.extra.comment %}
+            {% else %}
+                {% set show_comment = false %}
+            {% endif %}
+
+            {% if show_comment %}
+                <div class="giscus">
+                </div>
+                {% include "_giscus_script.html" %}
+            {% endif %}
+        </div>
+
+        <div class="right-content">
+            {% block right_content %}
+            {% endblock right_content %}
+        </div>
+        {% include "apollo/body_end.html" ignore missing %}
+    </body>
+
+</html>

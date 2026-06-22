@@ -1,0 +1,28 @@
+<!-- templates/shortcodes/latest_posts.html -->
+
+<article class="homepage-container">
+    {{ section.content | safe }}
+
+    {% set tech_section = get_section(path="tech/_index.md") %}
+    
+    <ul class="log-list" style="margin-top: 2rem;">
+        {% for post in tech_section.pages | slice(end=3) %}
+            <li class="log-item" style="margin-bottom: 1.5rem; list-style: none;">
+                <span class="log-date" style="font-family: monospace; opacity: 0.7; margin-right: 1rem;">
+                    {{ post.date | date(format="%Y-%m-%d") }}
+                </span>
+                <a class="log-link" href="{{ post.permalink }}" style="font-weight: bold; text-decoration: none;">
+                    {{ post.title }}
+                </a>
+                {% if post.description %}
+                    <p class="log-desc" style="margin: 0.25rem 0 0 0; opacity: 0.85; font-size: 0.95rem;">
+                        {{ post.description }}
+                    </p>
+                {% endif %}
+            </li>
+        {% endfor %}
+    </ul>
+    
+    <hr style="margin: 2rem 0;">
+    <p><a href="{{ get_url(path='company/_index.md') }}">会社概要を表示する →</a></p>
+</article>
