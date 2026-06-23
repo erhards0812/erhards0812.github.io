@@ -5,7 +5,7 @@ date = "2026-06-23"
 tags = ["Rust", "System Architecture", "Low OpEx", "AWSGraviton", "Operational Risk Reduction"]
 +++
 
-
+![profitable architecture](/images/posts/profitable_arch.jpg)
 
 ## Engineering Strategy: Architecture for Financial Sustainability and Growth
 

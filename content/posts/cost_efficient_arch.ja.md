@@ -5,6 +5,8 @@ date = "2026-06-23"
 tags = ["Rust", "System Architecture", "Low OpEx", "AWSGraviton", "Operational Risk Reduction"]
 +++
 
+![profitable architecture](/images/posts/profitable_arch.jpg)
+
 ## 技術戦略：財務的サステナビリティ（持続可能性）と成長のためのアーキテクチャ
 
 限られた資本の中で、急成長を遂げるSaaS（Software as a Service）

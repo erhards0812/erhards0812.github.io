@@ -5,6 +5,8 @@ date = "2026-06-22"
 tags = ["Rust", "Hogu", "Zola", "Synergy", "cognitive"]
 +++
 
+![HugoToZola](/images/posts/hugo_to_zola.jpg)
+
 # 個人開発コーポレートサイトをHugoからZolaへ移行した理由
 
 エンジニアとして、私たちはよく「技術の適材適所（Right tool for the job）」を説きます。しかし、その技術選定がもたらす隠れた、かつ複利的に膨らむコストを見落としがちです。それが「認知負荷（Cognitive Friction）」と「環境の経年劣化（Bit Rot）」です。
