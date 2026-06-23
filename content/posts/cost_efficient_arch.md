@@ -10,6 +10,8 @@ image = "/images/posts/profitable_arch.jpg"
 
 ![profitable architecture](@/images/posts/profitable_arch.jpg)
 
+{{ img(path="images/posts/profitable_arch.jpg", alt="profitable architecture") }}
+
 ## Engineering Strategy: Architecture for Financial Sustainability and Growth
 
 When scaling a high-growth Software as a Service (SaaS) product with constrained capital, the technical architecture is not merely an implementation detail—it *is* our primary financial mechanism. Our strategy must solve a dual mandate: achieving rapid feature velocity while guaranteeing rock-bottom operational expenditure (OpEx). We select technologies that don't just perform well; they fundamentally maximize performance per dollar spent and minimize systemic risk exposure at scale, extending our path to profitability.

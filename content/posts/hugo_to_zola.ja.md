@@ -8,7 +8,7 @@ tags = ["Rust", "Hogu", "Zola", "Synergy", "cognitive"]
 image = "/images/posts/hugo_to_zola.jpg"
 +++
 
-![HugoToZola](@/images/posts/hugo_to_zola.jpg)
+{{ img(path="images/posts/hugo_to_zola.jpg", alt="Hugo to Zola Migration") }}
 
 # 個人開発コーポレートサイトをHugoからZolaへ移行した理由
 

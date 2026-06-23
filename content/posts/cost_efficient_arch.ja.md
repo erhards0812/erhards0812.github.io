@@ -8,7 +8,7 @@ tags = ["Rust", "System Architecture", "Low OpEx", "AWSGraviton", "Operational R
 image = "/images/posts/profitable_arch.jpg"
 +++
 
-![profitable architecture](@/images/posts/profitable_arch.jpg)
+{{ img(path="images/posts/profitable_arch.jpg", alt="profitable architecture") }}
 
 ## 技術戦略：財務的サステナビリティ（持続可能性）と成長のためのアーキテクチャ
 
