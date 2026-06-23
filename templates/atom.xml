@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="{{ lang }}">
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="{{ lang }}" xmlns:media="http://search.yahoo.com/mrss/">
     <title>{{ config.title }}</title>
     <link href="{{ config.base_url | escape_xml | safe }}" rel="alternate" type="text/html"/>
     <link href="{{ feed_url | escape_xml | safe }}" rel="self" type="application/atom+xml"/>
@@ -13,6 +13,10 @@
         <title>{{ page.title }}</title>
         <link href="{{ page.permalink | escape_xml | safe }}" rel="alternate" type="text/html"/>
         <id>{{ page.permalink | escape_xml | safe }}</id>
+
+        {% if page.extra.image %}
+          <media:content url="{{ get_url(path=page.extra.image) }}" medium="image" type="image/jpeg" />
+        {% endif %}
 
         {% if page.date %}
           <published>{{ page.date | date(format="%Y-%m-%dT%H:%M:%S%:z") }}</published>

@@ -8,7 +8,7 @@ tags = ["Rust", "Hogu", "Zola", "Synergy", "cognitive"]
 image = "/images/posts/hugo_to_zola.jpg"
 +++
 
-![HugoToZola](/images/posts/hugo_to_zola.jpg)
+![HugoToZola](@/images/posts/hugo_to_zola.jpg)
 
 As engineers, we often preach the virtues of choosing the right tool for the job. But we frequently overlook a hidden, compounding cost in our technical choices: *cognitive friction* and *bit rot*.
 

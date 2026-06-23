@@ -8,7 +8,7 @@ tags = ["Rust", "System Architecture", "Low OpEx", "AWSGraviton", "Operational R
 image = "/images/posts/profitable_arch.jpg"
 +++
 
-![profitable architecture](/images/posts/profitable_arch.jpg)
+![profitable architecture](@/images/posts/profitable_arch.jpg)
 
 ## Engineering Strategy: Architecture for Financial Sustainability and Growth
 
