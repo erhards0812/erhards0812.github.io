@@ -3,6 +3,9 @@ title = "技術アーキテクチャの本質"
 description = "予測可能で収益性の高いSaaSシステムを構築する"
 date = "2026-06-23"
 tags = ["Rust", "System Architecture", "Low OpEx", "AWSGraviton", "Operational Risk Reduction"]
+
+[extra]
+image = "/images/posts/profitable_arch.jpg"
 +++
 
 ![profitable architecture](/images/posts/profitable_arch.jpg)

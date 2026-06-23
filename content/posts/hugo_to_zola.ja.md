@@ -3,6 +3,9 @@ title = "認知負荷と環境の経年劣化（Bit Rot）を排除する"
 description = "個人開発コーポレートサイトをHugoからZolaへ移行した理由"
 date = "2026-06-22"
 tags = ["Rust", "Hogu", "Zola", "Synergy", "cognitive"]
+
+[extra]
+image = "/images/posts/hugo_to_zola.jpg"
 +++
 
 ![HugoToZola](/images/posts/hugo_to_zola.jpg)

@@ -3,6 +3,9 @@ title = "Reducing Cognitive Load and Bit Rot: Why I Migrated My Engineering Site
 description = "Why I Migrated My Engineering Site from Hugo to Zola"
 date = "2026-06-22"
 tags = ["Rust", "Hogu", "Zola", "Synergy", "cognitive"]
+
+[extra]
+image = "/images/posts/hugo_to_zola.jpg"
 +++
 
 ![HugoToZola](/images/posts/hugo_to_zola.jpg)

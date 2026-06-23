@@ -3,6 +3,9 @@ title = "Engineering Architecture: Building Predictable & Profitable SaaS System
 description = "This post details an architecture designed to achieve maximum resource utility, focusing on systems that deliver rock-bottom operational expenditure (OpEx) while maintaining enterprise-grade reliability. My practice is dedicated to helping organizations build foundations that are technically robust, financially sustainable, and engineered for predictable growth at scale."
 date = "2026-06-23"
 tags = ["Rust", "System Architecture", "Low OpEx", "AWSGraviton", "Operational Risk Reduction"]
+
+[extra]
+image = "/images/posts/profitable_arch.jpg"
 +++
 
 ![profitable architecture](/images/posts/profitable_arch.jpg)

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="{{ lang }}">
+    <title>{{ config.title }}</title>
+    <link href="{{ config.base_url | escape_xml | safe }}" rel="alternate" type="text/html"/>
+    <link href="{{ feed_url | escape_xml | safe }}" rel="self" type="application/atom+xml"/>
+    <id>{{ feed_url | escape_xml | safe }}</id>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    {%- if last_updated %}
+    <updated>{{ last_updated }}</updated>
+    {%- endif %}
+    {%- for page in pages %}
+    <entry>
+        <title>{{ page.title }}</title>
+        <link href="{{ page.permalink | escape_xml | safe }}" rel="alternate" type="text/html"/>
+        <id>{{ page.permalink | escape_xml | safe }}</id>
+
+        {% if page.date %}
+          <published>{{ page.date | date(format="%Y-%m-%dT%H:%M:%S%:z") }}</published>
+        {% endif %}
+        
+        {% if page.updated %}
+          <updated>{{ page.updated | date(format="%Y-%m-%dT%H:%M:%S%:z") }}</updated>
+        {% elif page.date %}
+          <updated>{{ page.date | date(format="%Y-%m-%dT%H:%M:%S%:z") }}</updated>
+        {% endif %}
+
+
+        {# --- CUSTOM SPLASH IMAGE LOGIC FOR FORKWELL --- #}
+        {% if page.extra.image %}
+          {% if page.extra.image | ends_with(needle=".png") %}
+            {% set mime = "image/png" %}
+          {% elif page.extra.image | ends_with(needle=".webp") %}
+            {% set mime = "image/webp" %}
+          {% else %}
+            {% set mime = "image/jpeg" %}
+          {% endif %}
+        <link rel="enclosure" type="{{ mime }}" href="{{ get_url(path=page.extra.image) | escape_xml | safe }}" />
+        {% endif %}
+        {# ----------------------------------------------- #}
+
+        <content type="html" xml:base="{{ page.permalink | escape_xml | safe }}">
+        {%- if page.summary %}
+            {{ page.summary | escape_xml | safe }}
+        {%- else %}
+            {{ page.content | escape_xml | safe }}
+        {%- endif %}
+        </content>
+    </entry>
+    {%- endfor %}
+</feed>

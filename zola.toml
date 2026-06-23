@@ -4,6 +4,7 @@ default_language = "en"
 
 theme = "apollo"
 taxonomies = [{ name = "tags" }]
+generate_feeds = true
 
 # Whether to automatically compile all Sass files in the sass directory
 compile_sass = true
@@ -48,6 +49,7 @@ latest_posts = "Latest Posts"
 [languages.ja]
 title = "Shinyu 株式会社"
 description = "Rust / バックエンド開発・システム設計"
+generate_feeds = true
 
 [languages.ja.translations]
 home = "ホーム"
