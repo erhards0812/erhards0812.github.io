@@ -44,9 +44,9 @@
 
         <content type="html" xml:base="{{ page.permalink | escape_xml | safe }}">
         {%- if page.summary %}
-            {{ page.summary | escape_xml | safe }}
+            {{ page.summary | escape_xml }}
         {%- else %}
-            {{ page.content | escape_xml | safe }}
+            {{ page.content | escape_xml }}
         {%- endif %}
         </content>
     </entry>
