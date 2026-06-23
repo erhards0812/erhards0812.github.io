@@ -1,6 +1,6 @@
 +++
-title = "技術アーキテクチャの本質"
-description = "予測可能で収益性の高いSaaSシステムを構築する"
+title = "予測可能で収益性の高いSaaSシステムを構築する"
+description = "技術アーキテクチャの本質"
 date = "2026-06-23"
 tags = ["Rust", "System Architecture", "Low OpEx", "AWSGraviton", "Operational Risk Reduction"]
 
