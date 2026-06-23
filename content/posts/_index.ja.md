@@ -1,6 +1,6 @@
 +++
 paginate_by = 14 
-title = "Blog"
+title = "ブログ"
 sort_by = "date"
 
 insert_anchor_links = "heading"

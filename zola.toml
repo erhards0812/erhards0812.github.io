@@ -1,5 +1,7 @@
 # The URL the site will be built for
 base_url = "https://www.shinyu-corp.com"
+default_language = "en"
+
 theme = "apollo"
 taxonomies = [{ name = "tags" }]
 
@@ -24,7 +26,31 @@ socials = [
 ]
 
 menu = [
-  { name = "ホーム", url = "/", weight = 1 },
-  { name = "ブログ", url = "/posts", weight = 2 },
-  { name = "会社概要", url = "/company", weight = 3 },
+  { name = "home", url = "/", weight = 1 },
+  { name = "blog", url = "/posts", weight = 2 },
+  { name = "company", url = "/company", weight = 3 },
 ]
+
+# ==============================================================================
+# Multilingual Settings
+# ==============================================================================
+
+[languages.en]
+title = "Shinyu Inc"
+description = "High-Performance Rust Backend & Systems Engineering"
+
+[languages.en.translations]
+home = "Home"
+blog = "Blog"
+company = "Company"
+latest_posts = "Latest Posts"
+
+[languages.ja]
+title = "Shinyu 株式会社"
+description = "Rust / バックエンド開発・システム設計"
+
+[languages.ja.translations]
+home = "ホーム"
+blog = "ブログ"
+company = "会社概要"
+latest_posts = "最新記事"

@@ -20,14 +20,28 @@
                 Nothing here?!
             {% endblock main_content %}
 
-            {% if section.path is defined and section.path == "/" %}
-              {% set posts_section = get_section(path="posts/_index.md") %}
-    
-              <h1><a href="/posts">ブログ</a></h1>
-              <ul class="posts-list" style="margin-top: 2rem;">
-                  {% for post in posts_section.pages | slice(end=7) %}
+            {% if section.path is defined and (section.path == "/" or section.path == "/ja/") %}
+
+            {# 1. Dynamically get the correct section path based on the current language #}
+{% if lang == "en" %}
+    {% set target_section = get_section(path="posts/_index.md") %}
+{% else %}
+    {% set target_section = get_section(path="posts/_index." ~ lang ~ ".md") %}
+{% endif %}
+
+{# 2. Route the header link and pass the title string to the translation engine #}
+<h1>
+    <a href="{{ get_url(path='/posts', lang=lang) }}">
+        {{ trans(key="latest_posts", lang=lang) }}
+    </a>
+</h1>
+
+<ul class="posts-list" style="margin-top: 2rem;">
+    {# 3. Loop through the localized pages array #}
+    {% for post in target_section.pages | slice(end=7) %}
+
                       <li class="log-item" style="margin-bottom: 1.5rem; list-style: none;">
-                          <span class="log-date" style="font-family: monospace; opacity: 0.7; margin-right: 1rem;">
+                          <span class="log-date" style="font-family: monospace; opacity: 0.7; margin-right: 1rem; font-size: 1.4em">
                               {{ post.date | date(format="%Y-%m-%d") }}
                           </span>
                           <a class="log-link" href="{{ post.permalink }}" style="font-weight: bold; text-decoration: none;">

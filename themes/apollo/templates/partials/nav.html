@@ -1,13 +1,13 @@
 <nav>
     <div class="left-nav">
+        {# Fix the main logo link to respect the current active language path #}
         {% if config.extra.logo %}
-            <a href={{ config.base_url }} class="logo">
+            <a href="{{ get_url(path="", lang=lang) }}" class="logo">
                 <img alt="{{ config.title }}" src="{{ get_url(path=config.extra.logo) }}" />
             </a>
         {% else %}
-            <a href={{ config.base_url }}>{{ config.title }}</a>
+            <a href="{{ get_url(path="", lang=lang) }}">{{ config.title }}</a>
         {% endif %}
-
 
         <div class="socials">
             {% if config.markdown.external_links_target_blank %}
@@ -25,8 +25,11 @@
     </div>
 
     <div class="right-nav">
+        {# --- MULTILINGUAL MENU LINKS --- #}
         {% for menu in config.extra.menu %}
-            <a href={{ get_url(path=menu.url) }} style="margin-right: 0.5em">{{ menu.name }}</a>
+            <a href="{{ get_url(path=menu.url, lang=lang) }}" style="margin-right: 0.5em">
+                {{ trans(key=menu.name, lang=lang) }}
+            </a>
         {% endfor %}
 
         {% if config.build_search_index %}
@@ -96,5 +99,19 @@
                 updateItemToggleTheme()
             </script>
         {% endif %}
+
+        {# --- DYNAMIC LANGUAGE SWITCHER --- #}
+        <div style="margin-left: .5rem">
+          {% if lang == "en" %}
+              {# Safe switch from English to Japanese #}
+              <a href="{{ get_url(path=current_path | default(value=""), lang="ja") }}" style="margin-right: 0.5em; font-weight: bold;">JA</a>
+          {% else %}
+              {# Safe switch from Japanese back to English by stripping the '/ja/' prefix #}
+              {% set clean_path = current_path | replace(from="/ja/", to="/") %}
+              <a href="{{ get_url(path=clean_path | default(value=""), lang="en") }}" style="margin-right: 0.5em; font-weight: bold;">EN</a>
+          {% endif %}
+        </div>
     </div>
+
 </nav>
+

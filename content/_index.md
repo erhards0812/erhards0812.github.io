@@ -21,8 +21,17 @@ template = "homepage.html"
 </style>
 
 <div class="homepage-hero">
-    <h1 class="homepage-hero-title">Hi there</h1>
-    <p class="homepage-hero-subtitle" style="text-align: left">
-Shinyu株式会社は、大規模Webアプリケーションのアーキテクチャ刷新、および低レイヤー・高並列処理を伴う高パフォーマンスなバックエンド構築に特化したテックエージェンシーです。私たちは、長年培った Ruby on Rails の広範な知見をベースに、Go や Rust を駆使した高スループットなマイクロサービスへの切り出し、技術的負債の解消、データベースを含めたシステム全体のボトルネック最適化を得意としています。単に要件定義通りのコードを書くベンダーではなく、ビジネスの成長速度にシステムが追いつかなくなる「技術的限界」を、圧倒的な実装力とアーキテクチャ設計で突破するパートナーであることを誇りに思っています。不確実性の高い技術課題に粘り強く立ち向かい、クライアントのプロダクト価値を極限まで高めるシステム基盤を提供し続けます。
-</p>
+  <h1 class="homepage-hero-title">Hi there</h1>
+  <p class="homepage-hero-subtitle" style="text-align: left">
+Shinyu Inc. is a premier technology agency specializing in legacy architecture modernization for large-scale web applications, and high-performance backend systems leveraging low-level optimizations and high-concurrency.
+  </p>
+  <p class="homepage-hero-subtitle" style="text-align: left">
+    Backed by deep, extensive expertise in the Ruby on Rails ecosystem, we excel at decoupling legacy systems into high-throughput microservices using Go and Rust, systematic technical debt elimination, and end-to-end database and infrastructure bottleneck optimization.
+  </p>
+  <p class="homepage-hero-subtitle" style="text-align: left">
+We are not a standard vendor that merely ships specs to code. We pride ourselves on being a strategic engineering partner that destroys the "technical ceilings" where system architecture throttles business growth—achieved through ruthless execution and elite architectural design.
+  </p>
+  <p class="homepage-hero-subtitle" style="text-align: left">
+Relentlessly tackling highly volatile, complex engineering challenges, we engineer the resilient, world-class foundational infrastructure that maximizes the core value of our clients' products.
+  </p>
 </div>

@@ -1,37 +1,36 @@
-
 +++
-title = "会社概要"
+title = "Company Profile"
 path = "company"
 +++
 
-**会社名**
-: Shinyu株式会社
+**Company Name**
+: Shinyu Corp.
 
-**代表者氏名**
-: エアハルド シュテファン アンドレアス
+**CEO**
+: Stefan Andreas Erhard
 
-**会社の所在地**
-: 〒819-1331 福岡県糸島市志摩久家2281-3
+**Headquarters**
+: 2281-3 Shimaguga, Itoshima-shi, Fukuoka, 819-1331, Japan
 
-**設立年月日**
-: 令和５年４月１２日
+**Date of Incorporation**
+: April 12, 2023
 
-**資本金**
-: 50万円
+**Capital**
+: 500,000 JPY
 
-### 事業内容
+### Business Activities
 
-1. コンピュータのソフトウェア及びハードウェアの企画、研究、開発、設計、製造、販売、保守、リース、賃貸及び輸出入
-2. インターネット等の通信ネットワーク及び電子技術を利用した各種情報提供サービス
-3. 前号に係わるシステム・ソフトウェア開発及び受託並びに販売
-4. インターネット上の取引におけるエスクロー（第三者による寄託）サービスの提供
-5. デジタルコンテンツ（テキスト、音声、静止画、動画）の制作及び配信に関する仲介業
-6. ＥＣ（電子商取引）サイト、その他各種ウェブサイトの企画、制作、販売、配信、運営及び管理
-7. 各種商品の企画、製造、販売及び輸出入
-8. 通信販売及び通信販売に関する情報提供の仲介
-9. 画像、映像制作、動画撮影及び編集、加工並びに販売
-10. 広告代理業及び各種宣伝に関する業務
-11. 不動産の売買、賃貸借、管理、仲介、保有及び運用
-12. 各種イベント及びセミナー等の企画、開催、運営及び管理
-13. 前各号に関するコンサルティング業務及びマーケティング業務
-14. 前各号に附帯関連する一切の事業
+1. Planning, research, development, design, manufacturing, sales, maintenance, leasing, rental, and import/export of computer software and hardware.
+2. Information provision services utilizing telecommunication networks such as the Internet and electronic technologies.
+3. Development, contracting, and sales of systems and software related to the preceding item.
+4. Provision of escrow services for online transactions.
+5. Intermediary services for the production and distribution of digital content (text, audio, still images, and video).
+6. Planning, production, sales, distribution, operation, and management of e-commerce sites and various other websites.
+7. Planning, manufacturing, sales, and import/export of various commodities.
+8. Mail-order business and intermediary services for providing information related to mail-order sales.
+9. Production, shooting, editing, processing, and sales of images and videos.
+10. Advertising agency business and services related to various public relations.
+11. Buying, selling, leasing, management, brokerage, holding, and utilization of real estate.
+12. Planning, hosting, operation, and management of various events and seminars.
+13. Consulting and marketing services related to any of the preceding items.
+14. Any and all businesses incidental or related to the preceding items.
