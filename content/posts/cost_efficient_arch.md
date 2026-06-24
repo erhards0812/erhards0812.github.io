@@ -21,12 +21,19 @@ When scaling a high-growth Software as a Service (SaaS) product with constrained
 Our stack is built upon foundational pillars designed to ensure predictability, minimal overhead, and resilience against common cloud vulnerabilities:
 
 **1. Predictable Cost Performance: Rust for Resource Optimization**
-The core application logic is written in **Rust**. This provides critical financial advantages over traditional interpreted or VM-based stacks (e.g., Python/Node.js). By enforcing compile-time memory safety, type checking, and predictable resource usage, the result is a lower Total Cost of Ownership (TCO), allowing us to support larger user bases with significantly smaller cloud billing statements as we scale. We utilize battle-tested, performance-oriented libraries like **axum** for our web services layer and **sqlx** for asynchronous database interaction. These choices ensure that both network handling and data access benefit from compile-time guarantees and minimal overhead. Furthermore, Rust's strict compiler guarantees enable "fast and fearless refactoring," drastically reducing bugs found in production that consume expensive engineering time — estimated at $X per incident, multiplied by reduced Mean Time To Repair (MTTR). This focus on compile-time rigor translates directly into higher developer velocity and fewer operational surprises.
+
+The core application logic is written in **Rust**. This provides critical financial advantages over traditional interpreted or VM-based stacks (e.g., Python/Node.js). By enforcing compile-time memory safety, type checking, and predictable resource usage, the result is a lower Total Cost of Ownership (TCO), allowing us to support larger user bases with significantly smaller cloud billing statements as we scale.
+
+We utilize battle-tested, performance-oriented libraries like **axum** for our web services layer and **sqlx** for asynchronous database interaction. These choices ensure that both network handling and data access benefit from compile-time guarantees and minimal overhead.
+
+Furthermore, Rust's strict compiler guarantees enable "fast and fearless refactoring," drastically reducing bugs found in production that consume expensive engineering time — estimated at $X per incident, multiplied by reduced Mean Time To Repair (MTTR). This focus on compile-time rigor translates directly into higher developer velocity and fewer operational surprises.
 
 **2. Maximizing Compute Value: Dedicated AWS Graviton Utilization**
+
 All services are deployed exclusively on **AWS Graviton processors**. By utilizing the native ARM architecture, we achieve a substantial performance-per-dollar uplift compared to standard x86 instances, maximizing our compute budget. Furthermore, leveraging dedicated physical cores ensures consistent P99 latency—a non-negotiable requirement for enterprise Service Level Agreements (SLAs), mitigating revenue risk caused by unpredictable slowdowns.
 
 **3. Minimizing Operational Risk: Hardened and Auditable Infrastructure**
+
 To guarantee maximum security, compliance, and cost predictability, our deployment model is rigorously controlled:
 
 * **Streamlined Dependencies:** We use **Musl** to achieve static compilation across all services. This process eliminates complex runtime dependencies that create "dependency hell"—a major source of vulnerabilities and operational complexity—thereby reducing the attack surface area.
