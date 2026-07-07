@@ -1,5 +1,5 @@
 +++
-title = "Reducing Cognitive Load and Bit Rot: Why I Migrated My Engineering Site from Hugo to Zola"
+title = "Reducing Cognitive Load and Bit Rot"
 description = "Why I Migrated My Engineering Site from Hugo to Zola"
 date = "2026-06-22"
 tags = ["Rust", "Hogu", "Zola", "Synergy", "cognitive"]
@@ -9,6 +9,8 @@ image = "/images/posts/hugo_to_zola.jpg"
 +++
 
 {{ img(path="images/posts/hugo_to_zola.jpg", alt="Hugo to Zola Migration") }}
+
+# Why I Migrated My Engineering Site from Hugo to Zola
 
 As engineers, we often preach the virtues of choosing the right tool for the job. But we frequently overlook a hidden, compounding cost in our technical choices: *cognitive friction* and *bit rot*.
 
