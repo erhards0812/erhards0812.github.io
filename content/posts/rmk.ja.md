@@ -63,84 +63,122 @@ RMKは構造化されたTOMLフォーマットを使用しており、ボイラ�
 ```toml
 
 [keyboard]
-name = "Dilemma_3X6_Clone"
-vendor_id = 0xAFC5
-product_id = 0xBFC5
-manufacturer = "lucky_studio"
+name = "Ferris_Sweep_Bling_MX"
+product_name = "Ferris Sweep Bling MX"
+vendor_id = 0x4242
+product_id = 0x0001
+manufacturer = "RMK"
 chip = "rp2040"
+
+# [light]
+# Status LED configuration for power/connection state
+# [light.capslock]
+# pin = "PIN_17"
+# low_active = true    # Set to true because Pro Micro RX LEDs are pulled HIGH to 3.3V and sink LOW to light up
+
+[host]
+vial_enabled = true
+unlock_keys = [[0, 0], [0, 1]]
+
+[storage]
+enabled = true
 
 [split]
 connection = "serial"
 
 [split.central]
 rows = 4
-cols = 6
+cols = 5
 row_offset = 0
 col_offset = 0
 serial = [
-    { instance = "PIO0", tx_pin = "PIN_0", rx_pin = "PIN_1" }
+    { instance = "PIO0", tx_pin = "PIN_1", rx_pin = "PIN_1" }
 ]
 
 [split.central.matrix]
-row_pins = ["PIN_6", "PIN_12", "PIN_18", "PIN_17"]
-col_pins = ["PIN_10", "PIN_8", "PIN_7", "PIN_5", "PIN_13", "PIN_9"]
-row2col = true
+matrix_type = "direct_pin"
+direct_pin_low_active = true
+direct_pins = [
+  ["PIN_7",  "PIN_26",  "PIN_27",  "PIN_28",  "PIN_29"],
+  ["PIN_22", "PIN_20",  "PIN_23",  "PIN_21", "PIN_0"],
+  ["PIN_2", "PIN_3", "PIN_4", "PIN_5", "PIN_6"],
+  ["PIN_8", "PIN_9", "_", "_", "_"]
+]
 
 [[split.peripheral]]
 rows = 4
-cols = 6
+cols = 5
 row_offset = 0
-col_offset = 6
+col_offset = 5
 serial = [
-    { instance = "PIO0", tx_pin = "PIN_0", rx_pin = "PIN_1" }
+    { instance = "PIO0", tx_pin = "PIN_1", rx_pin = "PIN_1" }
 ]
 
 [split.peripheral.matrix]
-row_pins = ["PIN_12", "PIN_13", "PIN_17", "PIN_18"]
-col_pins = ["PIN_10", "PIN_9", "PIN_8", "PIN_7", "PIN_6", "PIN_5"]
-row2col = true
-
-[[input_device.encoder]]
-pin_a = "PIN_14"
-pin_b = "PIN_16"
-resolution = 4
-
-[storage]
-enabled = true
+matrix_type = "direct_pin"
+direct_pin_low_active = true
+direct_pins = [
+  ["PIN_29",  "PIN_28",  "PIN_27",  "PIN_26",  "PIN_7"],
+  ["PIN_0",  "PIN_21",  "PIN_23",  "PIN_20", "PIN_22"],
+  ["PIN_6", "PIN_5", "PIN_4", "PIN_3", "PIN_2"],
+  ["PIN_9", "PIN_8", "_",       "_",      "_"]
+]
 
 [layout]
 rows = 4
-cols = 12
+cols = 10
 map = """
-    (0,0) (0,1) (0,2) (0,3) (0,4) (0,5) (0,6) (0,7) (0,8) (0,9) (0,10) (0,11)
-    (1,0) (1,1) (1,2) (1,3) (1,4) (1,5) (1,6) (1,7) (1,8) (1,9) (1,10) (1,11)
-    (2,0) (2,1) (2,2) (2,3) (2,4) (2,5) (2,6) (2,7) (2,8) (2,9) (2,10) (2,11)
-    (3,0) (3,1) (3,2) (3,3) (3,4) (3,5) (3,6) (3,7) (3,8) (3,9) (3,10) (3,11)
+    (0,0) (0,1) (0,2) (0,3) (0,4) (0,5) (0,6) (0,7) (0,8) (0,9)
+    (1,0) (1,1) (1,2) (1,3) (1,4) (1,5) (1,6) (1,7) (1,8) (1,9)
+    (2,0) (2,1) (2,2) (2,3) (2,4) (2,5) (2,6) (2,7) (2,8) (2,9)
+    (3,0) (3,1)                   (3,5) (3,6)
 """
 
 [keymap]
 [[keymap.layer]]
 keys = """
-    Q       W       E       R       T       Y       U       I       O       P       No      No
-    A       S       D       F       G       H       J       K       L       SemiColon No    No
-    Z       X       C       V       B       N       M       Comma   Dot     Slash   No      No
-    LCtrl   LShift  Space   Tab     Enter   BackSpace LAlt   LGUI    No      No      No      No
+    B      F      R     L      V        J      Y      O     U     SemiColon
+    N      S      H     T      D        P      C      A     E     I
+    Z      X      K     M      Q        G      W      Comma  Dot  Slash
+                        Mo(1)  Ent      Space  Mo(2)
 """
 
 [[keymap.layer]]
 keys = """
-    1       2       3       4       5       6       7       8       9       0       No      No
-    No      Right   Up      Down    Left    VolU    No      No      No      No      No      No
-    No      No      No      No      No      VolD    No      No      No      No      No      No
-    LAlt    TRNS    No      No      No      No      No      No      No      No      No      No
+    No  No  No  No    No    No  No    No    No   No
+    No  No  No  No    No    No  No    No    No   No
+    No  No  No  No    No    No  No    No    No   No
+                Mo(1) Ent   Space Mo(2)
 """
 
+[[keymap.layer]]
+keys = """
+    No  No  No  No    No    No  No    No    No   No
+    No  No  No  No    No    No  No    No    No   No
+    No  No  No  No    No    No  No    No    No   No
+                Mo(1) Ent   Space Mo(2)
+"""
+
+[behavior.combo]
+timeout = "35ms"
+prior_idle_time = "50ms"  # optional, prevents accidental triggers during fast typing
+combos = [
+  # left side
+  { actions = ["f", "r"], output = "Tab"},
+  { actions = ["r", "l"], output = "LGui"},
+  { actions = ["h", "t"], output = "Escape"},
+  { actions = ["k", "m"], output = "SHIFTED(SemiColon)"},
+  # right side
+  { actions = [",", "."], output = "Backspace"},
+  { actions = ["o", "u"], output = "LGui"},
+  { actions = ["w", ","], output = "SemiColon"},
+]
 
 ```
 
 ## TOMLから卒業し、純粋なRustとEmbassyの世界へ
 
-私のキーボード（Dilemma Max）には、WS2812B RGBアンダーグローLEDが搭載されています。RMKのTOML設定スキーマは現時点でカスタムのアンダーグロー周辺機器を初期状態のままでサポートしていないため、LEDを駆動させるには宣言型設定ファイルを脱却し、純粋なRustでカスタムファームウェアを記述する必要がありました。
+元使用してたキーボード（Dilemma Max）には、WS2812B RGBアンダーグローLEDが搭載されています。RMKのTOML設定スキーマは現時点でカスタムのアンダーグロー周辺機器を初期状態のままでサポートしていないため、LEDを駆動させるには宣言型設定ファイルを脱却し、純粋なRustでカスタムファームウェアを記述する必要がありました。
 
 ```Rust
 
